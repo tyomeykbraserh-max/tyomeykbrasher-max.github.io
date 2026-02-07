@@ -1,118 +1,173 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>RSMARTem SITE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSMARTem SITE</title>
+<style>
+    /* Общие стили */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+        color: #fff;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
-            color: white;
-            text-align: center;
-        }
+    header {
+        padding: 30px;
+        text-align: center;
+        background: rgba(0,0,0,0.6);
+    }
 
-        header {
-            padding: 40px 20px;
-        }
+    header h1 {
+        margin: 0;
+        font-size: 40px;
+        color: #00ffcc;
+    }
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+    header p {
+        margin: 5px 0 0;
+        font-size: 18px;
+    }
 
-        h1 span {
-            color: #00ffcc;
-        }
+    /* Контейнер с двумя колонками */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 20px auto;
+        gap: 20px;
+        padding: 0 20px;
+    }
 
-        img {
-            width: 120px;
-            margin: 20px 0;
-        }
+    /* Левая колонка — записи */
+    .left {
+        flex: 1 1 400px;
+        background: rgba(255,255,255,0.05);
+        padding: 20px;
+        border-radius: 12px;
+    }
 
-        section {
-            background: rgba(255, 255, 255, 0.08);
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 600px;
-            border-radius: 12px;
-        }
+    .left h2 {
+        color: #00ffcc;
+        margin-top: 0;
+    }
 
-        h2 {
-            margin-top: 0;
-        }
+    .left .post {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0,255,204,0.3);
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+    /* Правая колонка — фото и видео */
+    .right {
+        flex: 1 1 400px;
+        background: rgba(255,255,255,0.05);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+    }
 
-        ul li {
-            margin: 10px 0;
-        }
+    .right img {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        border: 2px solid #00ffcc;
+    }
 
-        ul li::before {
-            content: "✔ ";
-            color: #00ffcc;
-        }
+    .right iframe {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 12px;
+    }
 
-        .socials a {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 25px;
-            background: #00ffcc;
-            color: #1e1e1e;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    /* Соцсети */
+    .socials a {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+        background: #00ffcc;
+        color: #1a1a1a;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
 
-        .socials a:hover {
-            background: #00c9a7;
-            transform: scale(1.05);
-        }
+    .socials a:hover {
+        background: #00c9a7;
+        transform: scale(1.05);
+    }
 
-        footer {
-            margin-top: 40px;
-            padding: 15px;
-            font-size: 14px;
-            opacity: 0.7;
+    /* Адаптив */
+    @media (max-width: 800px) {
+        .container {
+            flex-direction: column;
+            gap: 15px;
         }
-    </style>
+        .right img, .right iframe {
+            max-width: 100%;
+        }
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        opacity: 0.7;
+    }
+
+</style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Привет 👋<br>ты попал на сайт <span>RSMARTem</span></h1>
+<header>
+    <h1>Привет, это RSMARTem</h1>
+    <p>Мой сайт с записями, фото и видео</p>
+</header>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Логотип">
-    </header>
+<div class="container">
+    <!-- Левая колонка -->
+    <div class="left">
+        <h2>Мои записи</h2>
 
-    <section>
-        <h2>Зачем я сделал этот сайт?</h2>
-        <ul>
-            <li>Люблю что-то писать</li>
-            <li>Я — Артём</li>
-            <li>Это мой личный сайт</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Мои соцсети</h2>
-        <div class="socials">
-            <a href="https://t.me/RSMARTem" target="_blank">Telegram</a>
-            <a href="https://vk.com/gerasimovxd" target="_blank">VK</a>
-            <a href="https://github.com/tyomeykbraserh-max" target="_blank">GitHub</a>
+        <div class="post">
+            <h3>Запись 1</h3>
+            <p>Сегодня я создал новую страницу на своём сайте и учусь HTML и CSS!</p>
         </div>
-    </section>
 
-    <footer>
-        © 2026 RSMARTem
-    </footer>
+        <div class="post">
+            <h3>Запись 2</h3>
+            <p>Пробую добавить видео с YouTube и изображения. Это очень интересно!</p>
+        </div>
+
+        <div class="post">
+            <h3>Запись 3</h3>
+            <p>Планирую добавить кнопки соцсетей и анимацию для сайта.</p>
+        </div>
+    </div>
+
+    <!-- Правая колонка -->
+    <div class="right">
+        <h2>Фото и видео</h2>
+        <img src="https://www.debian.org/Pics/debian-logo-1024x576.png" alt="Моя картинка">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+
+        <h3>Соцсети</h3>
+        <div class="socials">
+            <a href="https://t.me/RSMARTem_Channel" target="_blank">Telegram-канал</a>
+            <a href="https://t.me/RSMARTem" target="_blank">Telegram</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 RSMARTem
+</footer>
 
 </body>
 </html>
